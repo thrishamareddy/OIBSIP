@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Unit Convertor</title>
+</head>
+<body>
+    <div ><img src="temp.jpeg">
+    </div>
+    <h2 style="text-align:center;padding-bottom:20px;color:green;">Temparature Units convertor</h2>
+    <div class="form">
+    <form id="conv">
+        <p style="padding-bottom:20px;font-weight:bolder;display:inline;padding-left:30%">Select the type of conversion</p>
+        <button class="button1"><a href="#box1">Celcius to Fahreinheit</a></button>
+        <button class="button2"><a href="ftoc.html">Fahreinheit to Celcius</a></button>
+    </form>
+    </div>
+    <div id="box1">
+        <h2 style="text-align:center;padding-top: 200px;padding-left:200px">Enter Temparature in Celcius</h2><br>
+        <div class="form">
+            <p style="color:red;font-weight:bolder;">Celcius:
+            <input id="celcius" type="number" name="celcius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+            </p>
+            <p style="color:blue;font-weight:bolder;">Fahreinheit:  <span id="output"></span>&nbsp &nbsp F</p>
+    
+        </div>
+        </div>
+        <script>
+            function temperatureConverter(valNum) {
+              valNum = parseFloat(valNum);
+              document.getElementById("output").innerHTML=(valNum*9/2)+32;
+            }
+            </script>
+
+    
+    
+</body>
+</html>
